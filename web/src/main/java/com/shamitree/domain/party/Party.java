@@ -6,6 +6,8 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
@@ -26,6 +28,7 @@ public abstract class Party extends NamedEntity {
 	
 	@Id
 	@Column(name="id")
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 
 	@OneToMany(cascade=CascadeType.REMOVE, mappedBy="party", orphanRemoval=true)

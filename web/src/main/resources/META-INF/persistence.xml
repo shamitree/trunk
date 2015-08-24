@@ -23,7 +23,7 @@
            data source, this example data source is just for development and testing! -->
         <!-- The datasource is deployed as WEB-INF/jboss-springmvc-webapp-ds.xml, you
            can find it in the source at src/main/webapp/WEB-INF/jboss-springmvc-webapp-ds.xml -->
-        <jta-data-source>java:jboss/datasources/jboss-springmvc-webappDSBasic</jta-data-source>
+        <jta-data-source>java:jboss/datasources/shamitree-ds</jta-data-source>
         <class>com.shamitree.domain.Address</class>
         <class>com.shamitree.domain.NamedEntity</class>
         <class>com.shamitree.domain.party.CoOperative</class>

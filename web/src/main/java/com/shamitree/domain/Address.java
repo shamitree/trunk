@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -23,6 +25,7 @@ public class Address implements Serializable {
 	
 	@Id
 	@Column(name="id")
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
 	@Enumerated(EnumType.STRING)
@@ -42,7 +45,7 @@ public class Address implements Serializable {
 	private String line3;
 	
 	//Suburb/ mandal
-	@Column(name="line1")
+	@Column(name="line4")
 	private String line4;
 	
 	//region/ district
@@ -62,7 +65,7 @@ public class Address implements Serializable {
 	private String country;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="id", referencedColumnName="party_id")
+	@JoinColumn(name="party_id", referencedColumnName="id")
 	private Party party;
 
 	public String getLine1() {

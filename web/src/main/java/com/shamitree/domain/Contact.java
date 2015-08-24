@@ -5,6 +5,8 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -21,6 +23,7 @@ public class Contact implements Serializable {
 	
 	@Id
 	@Column(name="id")
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 
 	@Column
@@ -42,7 +45,7 @@ public class Contact implements Serializable {
 	private String webSiteUrl;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
-	@JoinColumn(name="id", referencedColumnName="party_id")
+	@JoinColumn(name="party_id", referencedColumnName="id")
 	private Party party;
 
 	public long getId() {
