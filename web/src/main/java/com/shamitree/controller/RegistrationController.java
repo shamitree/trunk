@@ -16,6 +16,7 @@
  */
 package com.shamitree.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,7 @@ import org.springframework.transaction.UnexpectedRollbackException;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -66,12 +68,13 @@ public class RegistrationController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String register(@Valid @ModelAttribute("cooperative") PrimaryCoOperative primaryCoOperative, 
-    		@Valid @ModelAttribute("contact") Contact contact, BindingResult result, Model model) {
-    	System.out.println(primaryCoOperative.getName());
-    	System.out.println(((PrimaryCoOperative)model.asMap().get("cooperative")).getName());
-    	
-        if (!result.hasErrors()) {
+    public String register(HttpServletRequest request) {
+//    	System.out.println(primaryCoOperative.getName());
+//    	System.out.println(((PrimaryCoOperative)model.asMap().get("cooperative")).getName());
+    	String name = request.getParameter("name");
+    	System.out.println(name);
+    	return "register";
+        /*if (!result.hasErrors()) {
             try {
             	primaryCoOperativeDao.create(primaryCoOperative);
             	System.out.println(primaryCoOperative.getId());
@@ -81,6 +84,6 @@ public class RegistrationController {
             }
         } else {
             return "register";
-        }
+        }*/
     }
 }
