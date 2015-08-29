@@ -42,7 +42,7 @@ public class PrimaryCoOperative extends CoOperative {
 
 	private int numberOfYouthMembers;
 
-	private int numberOfDsiabledMembers;
+	private int numberOfDisabledMembers;
 
 	private int numberOfBlackMembers;
 
@@ -162,12 +162,12 @@ public class PrimaryCoOperative extends CoOperative {
 		this.numberOfYouthMembers = numberOfYouthMembers;
 	}
 
-	public int getNumberOfDsiabledMembers() {
-		return numberOfDsiabledMembers;
+	public int getNumberOfDisabledMembers() {
+		return numberOfDisabledMembers;
 	}
 
-	public void setNumberOfDsiabledMembers(int numberOfDsiabledMembers) {
-		this.numberOfDsiabledMembers = numberOfDsiabledMembers;
+	public void setNumberOfDisabledMembers(int numberOfDisabledMembers) {
+		this.numberOfDisabledMembers = numberOfDisabledMembers;
 	}
 
 	public int getNumberOfBlackMembers() {

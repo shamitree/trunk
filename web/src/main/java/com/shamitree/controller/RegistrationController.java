@@ -16,6 +16,8 @@
  */
 package com.shamitree.controller;
 
+import java.math.BigDecimal;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
@@ -71,9 +73,9 @@ public class RegistrationController {
     public String register(HttpServletRequest request) {
 //    	System.out.println(primaryCoOperative.getName());
 //    	System.out.println(((PrimaryCoOperative)model.asMap().get("cooperative")).getName());
-    	String name = request.getParameter("name");
-    	System.out.println(name);
-    	return "register";
+    	PrimaryCoOperative primaryCoOperative = extractRequest(request);
+    	primaryCoOperativeDao.create(primaryCoOperative);
+    	System.out.println(primaryCoOperative.getId());
         /*if (!result.hasErrors()) {
             try {
             	primaryCoOperativeDao.create(primaryCoOperative);
@@ -85,5 +87,117 @@ public class RegistrationController {
         } else {
             return "register";
         }*/
+    	return "register";
     }
+
+	private PrimaryCoOperative extractRequest(HttpServletRequest request) {
+		
+		PrimaryCoOperative primaryCoOperative = new PrimaryCoOperative();
+		
+		String name = request.getParameter("name");
+    	String registrationNumber = request.getParameter("registrationNumber");
+    	String taxNumber = request.getParameter("taxNumber");
+    	String skillDevelopmentLevyNumber = request.getParameter("skillDevelopmentLevyNumber");
+    	String uifNumber = request.getParameter("uifNumber");
+    	String workmenCompensationNumber = request.getParameter("workmenCompensationNumber");
+    	String telephoneNumber = request.getParameter("telephoneNumber");
+    	String faxNumber = request.getParameter("faxNumber");
+    	String email = request.getParameter("email");
+    	String website = request.getParameter("website");
+    	String sector = request.getParameter("sector");
+    	String phLine1 = request.getParameter("phLine1");
+    	String phLine2 = request.getParameter("phLine2");
+    	String phLine3 = request.getParameter("phLine3");
+    	String phSuburb = request.getParameter("phSuburb");
+    	String phProvince = request.getParameter("pPhrovince");
+    	String phPostalCode = request.getParameter("phPostalCode");
+    	String isPostalAdrressSame = request.getParameter("isPostalAdrressSame");
+    	String poLine1 = request.getParameter("poLine1");
+    	String poLine2 = request.getParameter("poLine2");
+    	String poLine3 = request.getParameter("poLine3");
+    	String poSuburb = request.getParameter("poSuburb");
+    	String poPostalCode = request.getParameter("poPostalCode");
+    	String poProvince = request.getParameter("poProvince");
+    	String numberOfMembers = request.getParameter("numberOfMembers");
+    	String numberOfMaleMembers = request.getParameter("numberOfMaleMembers");
+    	String numberOfFemaleMembers = request.getParameter("numberOfFemaleMembers");
+    	String numberOfYouthMembers = request.getParameter("numberOfYouthMembers");
+    	String numberOfDisabledMembers = request.getParameter("numberOfDisabledMembers");
+    	String numberOfBlackMembers = request.getParameter("numberOfBlackMembers");
+    	String numberOfColouredMembers = request.getParameter("numberOfColouredMembers");
+    	String numberOfIndianMembers = request.getParameter("numberOfIndianMembers");
+    	String numberOfWhiteMembers = request.getParameter("numberOfWhiteMembers");
+    	String currentMonthlyTurnover = request.getParameter("currentMonthlyTurnover");
+    	String yearlyTurnover = request.getParameter("yearlyTurnover");
+    	String numberOfEmployees = request.getParameter("numberOfEmployees");
+    	String receivedGrant = request.getParameter("receivedGrant");
+    	String grantingDepartment = request.getParameter("grantingDepartment");
+    	String requiredSupport = request.getParameter("requiredSupport");
+    	
+    	
+    	primaryCoOperative.setChairPerson(null);
+    	primaryCoOperative.setCode(null);
+    	primaryCoOperative.setDepartmentOfGovtGrant(grantingDepartment);
+    	primaryCoOperative.setDeputyChairPerson(null);
+    	primaryCoOperative.setDeputySecretary(null);
+    	primaryCoOperative.setDescription(null);
+    	//TODO 
+    	primaryCoOperative.setFranchise(false);
+    	primaryCoOperative.setMonthlyTurnOver(new BigDecimal(currentMonthlyTurnover));
+    	primaryCoOperative.setName(name);
+    	primaryCoOperative.setNumberOfBlackMembers(Integer.valueOf(numberOfBlackMembers));
+    	primaryCoOperative.setNumberOfColouredMembers(Integer.valueOf(numberOfColouredMembers));
+    	primaryCoOperative.setNumberOfDisabledMembers(Integer.valueOf(numberOfDisabledMembers));
+    	primaryCoOperative.setNumberOfEmployees(Integer.valueOf(numberOfEmployees));
+    	primaryCoOperative.setNumberOfFemaleMembers(Integer.valueOf(numberOfFemaleMembers));
+    	primaryCoOperative.setNumberOfIndianMembers(Integer.valueOf(numberOfIndianMembers));
+    	primaryCoOperative.setNumberOfMaleMembers(Integer.valueOf(numberOfMaleMembers));
+    	primaryCoOperative.setNumberOfMembers(Integer.valueOf(numberOfMembers));
+    	primaryCoOperative.setNumberOfWhiteMembers(Integer.valueOf(numberOfWhiteMembers));
+    	primaryCoOperative.setNumberOfYouthMembers(Integer.valueOf(numberOfYouthMembers));
+    	primaryCoOperative.setRegistrationNumber(registrationNumber);
+    	//TODO
+    	primaryCoOperative.setReceivedGovtGrant(false);
+    	primaryCoOperative.setTaxNumber(taxNumber);
+    	primaryCoOperative.setYearlyTurnOver(new BigDecimal(yearlyTurnover));
+    	
+    	Address physicalAddress = new Address();
+    	physicalAddress.setCountry(null);
+    	physicalAddress.setLine1(phLine1);
+    	physicalAddress.setLine2(phLine2);
+    	physicalAddress.setLine3(phLine3);
+    	physicalAddress.setLine4(phSuburb);
+    	physicalAddress.setPostalCode(phPostalCode);
+    	physicalAddress.setProvince(phProvince);    
+    	
+    	
+    	Address postalAddress = new Address();
+    	postalAddress.setCountry(null);
+    	postalAddress.setLine1(poLine1);
+    	postalAddress.setLine2(poLine2);
+    	postalAddress.setLine3(poLine3);
+    	postalAddress.setLine4(poSuburb);
+    	postalAddress.setPostalCode(poPostalCode);
+    	postalAddress.setProvince(poProvince);    
+    	
+    	primaryCoOperative.getAddressList().add(physicalAddress);
+    	primaryCoOperative.getAddressList().add(postalAddress);
+    	
+    	Contact contact = new Contact();
+    	contact.setFax(faxNumber);
+    	contact.setPrimaryPhoneNumber(telephoneNumber);
+    	contact.setPrimaryEmail(email);
+    	contact.setWebSiteUrl(website);
+    	
+    	primaryCoOperative.getContactList().add(contact);
+    	
+    	Sector sectorObj = new Sector();
+    	sectorObj.setName(sector);
+    	
+    	primaryCoOperative.getSectors().add(sectorObj);
+    	
+    	//TODO Persons
+    	
+    	return primaryCoOperative;
+	}
 }

@@ -14,57 +14,14 @@
     <meta name="author" content="">
 
     <title>Registration</title>
-    
-    <!-- Bootstrap Core CSS -->
-    <link href="<c:url value="/static/resources/bower_components/bootstrap/dist/css/bootstrap.min.css"/>" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
-    <link href="<c:url value="/static/resources/bower_components/metisMenu/dist/metisMenu.min.css"/>" rel="stylesheet">
-
-    <!-- Timeline CSS -->
-    <link href="<c:url value="/static/resources/dist/css/timeline.css"/>" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="<c:url value="/static/resources/dist/css/sb-admin-2.css"/>" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="<c:url value="/static/resources/bower_components/morrisjs/morris.css"/>" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="<c:url value="/static/resources/bower_components/font-awesome/css/font-awesome.min.css"/>" rel="stylesheet" type="text/css">
-
-    
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-	
 	
 </head>
 
 <body>
-    <div id="wrapper">
 
-   <div>
-            <div class="row">
-                <div >
-                    <h1 class="page-header">Co-operative registration</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <div>
-                    <div class="panel panel-default">
-                        <!-- <div class="panel-heading">
-                            Sub Heading
-                        </div> -->
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <form:form role="form" commandName="register" method="POST">
+	<div>
+	
+		<form:form role="form" commandName="register" method="POST">
 									
                                         <div class="form-group">
                                             <label>Name</label>
@@ -73,96 +30,218 @@
 										
 										<div class="form-group">
                                             <label>Registration number</label>
-                                            <input class="form-control" id="registrationNumber">
+                                            <input class="form-control" id="registrationNumber" name="registrationNumber">
                                         </div>
 										
 										<div class="form-group">
                                             <label>Tax number</label>
-                                            <input class="form-control" id="taxNumber">
+                                            <input class="form-control" id="taxNumber" name="taxNumber">
                                         </div>
 										
 										<div class="form-group">
                                             <label>Skill development levy number</label>
-                                            <input class="form-control" id="skillDevelopmentLevyNumber">
+                                            <input class="form-control" id="skillDevelopmentLevyNumber" name="skillDevelopmentLevyNumber">
                                         </div>
 										
 										<div class="form-group">
                                             <label>UIF number</label>
-                                            <input class="form-control" id="uifNumber">
+                                            <input class="form-control" id="uifNumber" name="uifNumber">
                                         </div>
 										
 										<div class="form-group">
                                             <label>Wrokmen's compensation number</label>
-                                            <input class="form-control" id="workmenCompensationNumber">
+                                            <input class="form-control" id="workmenCompensationNumber" name="workmenCompensationNumber">
                                         </div>
 										
 										<div class="form-group">
                                             <label>Telephone number</label>
-                                            <input class="form-control" id="telephoneNumber">
+                                            <input class="form-control" id="telephoneNumber" name="telephoneNumber">
                                         </div>
 										
 										<div class="form-group">
                                             <label>Fax number</label>
-                                            <input class="form-control" id="faxNumber">
+                                            <input class="form-control" id="faxNumber" name="faxNumber">
                                         </div>
 										
 										<div class="form-group">
                                             <label>Email</label>
-                                            <input class="form-control" id="email">
+                                            <input class="form-control" id="email" name="email">
                                         </div>
 										
 										<div class="form-group">
                                             <label>Website url</label>
-                                            <input class="form-control" id="website">
+                                            <input class="form-control" id="website" name="website">
                                         </div>
 										
 										<div class="form-group">
                                             <label>Sector</label>
-                                            <select class="form-control" id="sector">
+                                            <select class="form-control" id="sector" name="sector">
                                                 <option>Agriculture</option>
                                                 <option>Manufacturing</option>
                                                 <option>Service</option>
                                             </select>
-                                        </div>									
+                                        </div>	
+                                        <br/>
+                                        Physical Address
+                                        <br/>
+                                        <div class="form-group">
+                                            <label>Line 1</label>
+                                            <input class="form-control" id="phLine1" name="phLine1">
+                                        </div>	
                                         
+                                        <div class="form-group">
+                                            <label>Line 2</label>
+                                            <input class="form-control" id="phLine2" name="phLine2">
+                                        </div>								
+                                        
+                                        <div class="form-group">
+                                            <label>Line 3</label>
+                                            <input class="form-control" id="phLine3" name="phLine3">
+                                        </div>	
+                                        
+                                        <div class="form-group">
+                                            <label>Suburb</label>
+                                            <input class="form-control" id="phSuburb" name="phSuburb">
+                                        </div>	
+                                        
+                                        <div class="form-group">
+                                            <label>Province</label>
+                                            <select class="form-control" id="phProvince" name="phProvince">
+                                                <option>Gauteng</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label>Postal code</label>
+                                            <input class="form-control" id="phPostalCode" name="phPostalCode">
+                                        </div>
+                                        	
+                                        <br/>
+                                        
+                                        <div class="form-group">
+                                            <label>Is the above address is postal address as well? </label>
+                                        	<input class="form-control" type="checkbox" value="" id="isPostalAdrressSame" name="isPostalAdrressSame">
+                                        </div>
+                                        	
+                                        <br/>
+                                        
+                                        <div id="postalAddressBlock">
+                                        	Postal Address
+	                                       	<div class="form-group">
+	                                            <label>Line 1</label>
+	                                            <input class="form-control" id="poLine1" name="poLine1">
+	                                        </div>	
+	                                        
+	                                        <div class="form-group">
+	                                            <label>Line 2</label>
+	                                            <input class="form-control" id="poLine2" name="poLine2">
+	                                        </div>								
+	                                        
+	                                        <div class="form-group">
+	                                            <label>Line 3</label>
+	                                            <input class="form-control" id="poLine3" name="poLine3">
+	                                        </div>	
+	                                        
+	                                        <div class="form-group">
+	                                            <label>Suburb</label>
+	                                            <input class="form-control" id="poSuburb" name="poSuburb">
+	                                        </div>	
+	                                        
+	                                        <div class="form-group">
+	                                            <label>Province</label>
+	                                            <select class="form-control" id="poProvince" name="poProvince">
+	                                                <option>Gauteng</option>
+	                                            </select>
+	                                        </div>
+	                                        
+	                                        <div class="form-group">
+	                                            <label>Postal code</label>
+	                                            <input class="form-control" id="poPostalCode" name="poPostalCode">
+	                                        </div>
+                                        </div>
+                                        	
+                                        <br/>
+                                        
+                                        <div class="form-group">
+	                                     	<label>No. of members</label>
+	                                        <input class="form-control" id="numberOfMembers" name="numberOfMembers">
+	                                    </div>
+	                                    
+	                                    <div class="form-group">
+	                                     	<label>No. of male members</label>
+	                                        <input class="form-control" id="numberOfMaleMembers" name="numberOfMaleMembers">
+	                                    </div>
+	                                    
+	                                    <div class="form-group">
+	                                     	<label>No. of female members</label>
+	                                        <input class="form-control" id="numberOfFemaleMembers" name="numberOfFemaleMembers">
+	                                    </div>
+	                                    
+	                                    <div class="form-group">
+	                                     	<label>No. of youth members</label>
+	                                        <input class="form-control" id="numberOfYouthMembers" name="numberOfYouthMembers">
+	                                    </div>
+                                        
+                                        <div class="form-group">
+	                                     	<label>No. of disabled members</label>
+	                                        <input class="form-control" id="numberOfDisabledMembers" name="numberOfDisabledMembers">
+	                                    </div>
+	                                    
+	                                    <div class="form-group">
+	                                     	<label>No. of Black members</label>
+	                                        <input class="form-control" id="numberOfBlackMembers" name="numberOfBlackMembers">
+	                                    </div>
+	                                    
+	                                    <div class="form-group">
+	                                     	<label>No. of coloured members</label>
+	                                        <input class="form-control" id="numberOfColouredMembers" name="numberOfColouredMembers">
+	                                    </div>
+	                                    
+	                                    <div class="form-group">
+	                                     	<label>No. of indian members</label>
+	                                        <input class="form-control" id="numberOfIndianMembers" name="numberOfIndianMembers">
+	                                    </div>
+	                                    
+	                                    <div class="form-group">
+	                                     	<label>No. of white members</label>
+	                                        <input class="form-control" id="numberOfWhiteMembers" name="numberOfWhiteMembers">
+	                                    </div>
+	                                    
+	                                    <div class="form-group">
+	                                     	<label>Current monthly turnover</label>
+	                                        <input class="form-control" id="currentMonthlyTurnover" name="currentMonthlyTurnover">
+	                                    </div>
+	                                    
+	                                    <div class="form-group">
+	                                     	<label>Estimated yearly turnover</label>
+	                                        <input class="form-control" id="yearlyTurnover" name=yearlyTurnover>
+	                                    </div>
+	                                    
+	                                    <div class="form-group">
+	                                     	<label>No. of employees</label>
+	                                        <input class="form-control" id="numberOfEmployees" name="numberOfEmployees">
+	                                    </div>
+	                                    
+	                                    <div class="form-group">
+                                            <label>Have you previously received a Government support Grant Financial/Non-Financial?</label>
+                                        	<input class="form-control" type="checkbox" value="" id="receivedGrant" name="receivedGrant">
+                                        </div>
+	                                    
+	                                    <div class="form-group">
+	                                     	<label>Department or Agency Provided the Support</label>
+	                                        <input class="form-control" id="grantingDepartment" name="grantingDepartment">
+	                                    </div>
+	                                    
+	                                    <div class="form-group">
+	                                     	<label>What kind of Support do you require?</label>
+	                                        <input class="form-control" id="requiredSupport" name="requiredSupport">
+	                                    </div>
+	                                    
                                         <button type="submit" class="btn btn-default">Submit</button>
                                         <button type="reset" class="btn btn-default">Reset</button>
                                     </form:form>
-                                </div>                               
-                               
-                            </div>
-                            <!-- /.row (nested) -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-        </div>    
-
-        
-    <!-- /#page-wrapper -->
-    </div>
-    <!-- /#wrapper -->
-    
-    <!-- jQuery -->
-    <script src="<c:url value="/static/resources/bower_components/jquery/dist/jquery.min.js"/>"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="<c:url value="/static/resources/bower_components/bootstrap/dist/js/bootstrap.min.js"/>"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="<c:url value="/static/resources/bower_components/metisMenu/dist/metisMenu.min.js"/>"></script>
-
-    <!-- Morris Charts JavaScript -->
-    <script src="<c:url value="/static/resources/bower_components/raphael/raphael-min.js"/>"></script>
-    <script src="<c:url value="/static/resources/bower_components/morrisjs/morris.min.js"/>"></script>
-    <script src="<c:url value="/static/resources/js/morris-data.js"/>"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="<c:url value="/static/resources/dist/js/sb-admin-2.js"/>"></script>
+		
+	</div>
 
 </body>
 
