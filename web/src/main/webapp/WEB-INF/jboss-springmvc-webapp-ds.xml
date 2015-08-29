@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!-- 
 <datasources xmlns="http://www.jboss.org/ironjacamar/schema"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://www.jboss.org/ironjacamar/schema http://docs.jboss.org/ironjacamar/schema/datasources_1_0.xsd">
@@ -14,4 +14,24 @@
             <password>sa</password>
         </security>
     </datasource>
+</datasources> -->
+
+<datasources>
+<datasource jndi-name="java:jboss/datasources/shamitree-ds" pool-name="mysqlDS_pool">
+  <connection-url>jdbc:mysql://localhost:3306/shamitree</connection-url>
+  <driver>mysql</driver>
+  <transaction-isolation>TRANSACTION_READ_COMMITTED</transaction-isolation>
+  <pool>
+    <min-pool-size>100</min-pool-size>
+    <max-pool-size>200</max-pool-size>
+  </pool>
+  <security>
+    <user-name>root</user-name>
+    <password>password</password>
+  </security>
+  <statement>
+    <prepared-statement-cache-size>100</prepared-statement-cache-size>
+    <share-prepared-statements/>
+  </statement>
+</datasource>
 </datasources>

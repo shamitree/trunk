@@ -31,10 +31,10 @@ public abstract class Party extends NamedEntity {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 
-	@OneToMany(cascade=CascadeType.REMOVE, mappedBy="party", orphanRemoval=true)
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="party", orphanRemoval=true)
 	private List<Address> addressList = new ArrayList<Address>();
 	
-	@OneToMany(cascade=CascadeType.REMOVE, mappedBy="party", orphanRemoval=true)
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="party", orphanRemoval=true)
 	private List<Contact> contactList = new ArrayList<Contact>();
 	
 	private Party parent;
