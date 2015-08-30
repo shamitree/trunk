@@ -3,6 +3,8 @@ package com.shamitree.domain.party;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -23,6 +25,12 @@ public class Person extends Party {
 	private String middleName;
 	
 	private String gender;
+	
+	private String designation;
+
+	@ManyToOne
+	@JoinColumn(name="party_id", referencedColumnName="id")
+	private Party party;
 	
 	@Temporal(TemporalType.DATE)
 	private Date dob;
@@ -65,6 +73,14 @@ public class Person extends Party {
 
 	public void setDob(Date dob) {
 		this.dob = dob;
+	}
+
+	public String getDesignation() {
+		return designation;
+	}
+
+	public void setDesignation(String designation) {
+		this.designation = designation;
 	}
 	
 }

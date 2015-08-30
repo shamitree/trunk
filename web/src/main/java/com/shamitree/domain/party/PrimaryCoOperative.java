@@ -1,8 +1,12 @@
 package com.shamitree.domain.party;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -32,6 +36,9 @@ public class PrimaryCoOperative extends CoOperative {
 
 	private Person deputySecretary;
 
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="party", orphanRemoval=true)
+	private List<Person> members = new ArrayList<Person>();
+	
 	private Person Treasurer;
 
 	private int numberOfMembers;
@@ -258,4 +265,7 @@ public class PrimaryCoOperative extends CoOperative {
 		this.franchise = franchise;
 	}
 
+	public List<Person> getMembers() {
+		return members;
+	}
 }
