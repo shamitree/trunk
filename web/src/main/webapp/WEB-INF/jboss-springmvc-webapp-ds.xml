@@ -18,7 +18,7 @@
 
 <datasources>
 <datasource jndi-name="java:jboss/datasources/shamitree-ds" pool-name="mysqlDS_pool">
-  <connection-url>jdbc:mysql://localhost:3306/shamitree</connection-url>
+  <connection-url>jdbc:mysql://localhost:3306/shamitree4</connection-url>
   <driver>mysql</driver>
   <transaction-isolation>TRANSACTION_READ_COMMITTED</transaction-isolation>
   <pool>

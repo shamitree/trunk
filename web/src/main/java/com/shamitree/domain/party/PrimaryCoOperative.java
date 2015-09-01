@@ -28,19 +28,9 @@ public class PrimaryCoOperative extends CoOperative {
 
 	private String workmenCompensationNumber;
 
-	private Person chairPerson;
-
-	private Person deputyChairPerson;
-
-	private Person secretary;
-
-	private Person deputySecretary;
-
-	@OneToMany(cascade=CascadeType.ALL, mappedBy="party", orphanRemoval=true)
-	private List<Person> members = new ArrayList<Person>();
+//	@OneToMany(cascade=CascadeType.ALL, mappedBy="party", orphanRemoval=true)
+//	private List<Person> members = new ArrayList<Person>();
 	
-	private Person Treasurer;
-
 	private int numberOfMembers;
 
 	private int numberOfMaleMembers;
@@ -95,46 +85,6 @@ public class PrimaryCoOperative extends CoOperative {
 
 	public void setWorkmenCompensationNumber(String workmenCompensationNumber) {
 		this.workmenCompensationNumber = workmenCompensationNumber;
-	}
-
-	public Person getChairPerson() {
-		return chairPerson;
-	}
-
-	public void setChairPerson(Person chairPerson) {
-		this.chairPerson = chairPerson;
-	}
-
-	public Person getDeputyChairPerson() {
-		return deputyChairPerson;
-	}
-
-	public void setDeputyChairPerson(Person deputyChairPerson) {
-		this.deputyChairPerson = deputyChairPerson;
-	}
-
-	public Person getSecretary() {
-		return secretary;
-	}
-
-	public void setSecretary(Person secretary) {
-		this.secretary = secretary;
-	}
-
-	public Person getDeputySecretary() {
-		return deputySecretary;
-	}
-
-	public void setDeputySecretary(Person deputySecretary) {
-		this.deputySecretary = deputySecretary;
-	}
-
-	public Person getTreasurer() {
-		return Treasurer;
-	}
-
-	public void setTreasurer(Person treasurer) {
-		Treasurer = treasurer;
 	}
 
 	public int getNumberOfMembers() {
@@ -265,7 +215,7 @@ public class PrimaryCoOperative extends CoOperative {
 		this.franchise = franchise;
 	}
 
-	public List<Person> getMembers() {
-		return members;
-	}
+//	public List<Person> getMembers() {
+//		return members;
+//	}
 }

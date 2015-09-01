@@ -67,7 +67,8 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html">South African Co-Operative Union</a>
+				<a class="navbar-brand" href="index.html">South African
+					Co-Operative Union</a>
 			</div>
 			<!-- /.navbar-header -->
 
@@ -329,408 +330,453 @@
 
 									<form:form role="form" commandName="register" method="POST">
 
-										<div class="form-group">
-											<label>Name</label> <input class="form-control" id="name"
-												name="name" />
-										</div>
-
-										<div class="form-group">
-											<label>Registration number</label> <input
-												class="form-control" id="registrationNumber"
-												name="registrationNumber">
-										</div>
-
-										<div class="form-group">
-											<label>Tax number</label> <input class="form-control"
-												id="taxNumber" name="taxNumber">
-										</div>
-
-										<div class="form-group">
-											<label>Skill development levy number</label> <input
-												class="form-control" id="skillDevelopmentLevyNumber"
-												name="skillDevelopmentLevyNumber">
-										</div>
-
-										<div class="form-group">
-											<label>UIF number</label> <input class="form-control"
-												id="uifNumber" name="uifNumber">
-										</div>
-
-										<div class="form-group">
-											<label>Wrokmen's compensation number</label> <input
-												class="form-control" id="workmenCompensationNumber"
-												name="workmenCompensationNumber">
-										</div>
-
-										<div class="form-group">
-											<label>Telephone number</label> <input class="form-control"
-												id="telephoneNumber" name="telephoneNumber">
-										</div>
-
-										<div class="form-group">
-											<label>Fax number</label> <input class="form-control"
-												id="faxNumber" name="faxNumber">
-										</div>
-
-										<div class="form-group">
-											<label>Email</label> <input class="form-control" id="email"
-												name="email">
-										</div>
-
-										<div class="form-group">
-											<label>Website url</label> <input class="form-control"
-												id="website" name="website">
-										</div>
-
-										<div class="form-group">
-											<label>Sector</label> <select class="form-control"
-												id="sector" name="sector">
-												<option>Agriculture</option>
-												<option>Manufacturing</option>
-												<option>Service</option>
-											</select>
-										</div>
-										<br />
-                                        Physical Address
-                                        <br />
-										<div class="form-group">
-											<label>Line 1</label> <input class="form-control"
-												id="phLine1" name="phLine1">
-										</div>
-
-										<div class="form-group">
-											<label>Line 2</label> <input class="form-control"
-												id="phLine2" name="phLine2">
-										</div>
-
-										<div class="form-group">
-											<label>Line 3</label> <input class="form-control"
-												id="phLine3" name="phLine3">
-										</div>
-
-										<div class="form-group">
-											<label>Suburb</label> <input class="form-control"
-												id="phSuburb" name="phSuburb">
-										</div>
-
-										<div class="form-group">
-											<label>Province</label> <select class="form-control"
-												id="phProvince" name="phProvince">
-												<option>Gauteng</option>
-											</select>
-										</div>
-
-										<div class="form-group">
-											<label>Postal code</label> <input class="form-control"
-												id="phPostalCode" name="phPostalCode">
-										</div>
-
-										<br />
-
-										<div class="form-group">
-											<label>Is the above address is postal address as
-												well? </label> <input class="form-control" type="checkbox" value=""
-												id="isPostalAdrressSame" name="isPostalAdrressSame">
-										</div>
-
-										<br />
-
-										<div id="postalAddressBlock">
-											Postal Address
-											<div class="form-group">
-												<label>Line 1</label> <input class="form-control"
-													id="poLine1" name="poLine1">
+										<div id="rootwizard">
+											<div class="navbar">
+												<div class="navbar-inner">
+													<div class="container">
+														<ul>
+															<li><a href="#tab1" data-toggle="tab">Basic Info</a></li>
+															<li><a href="#tab2" data-toggle="tab">Contact
+																	Details</a></li>
+															<li><a href="#tab3" data-toggle="tab">Address</a></li>
+															<li><a href="#tab4" data-toggle="tab">Demographics</a></li>
+															<li><a href="#tab5" data-toggle="tab">Members</a></li>
+														</ul>
+													</div>
+												</div>
 											</div>
+											<!-- <div id="bar" class="progress progress-striped active">
+												<div class="bar"></div>
+											</div> -->
+											<div class="tab-content">
+												<div class="tab-pane" id="tab1">
 
-											<div class="form-group">
-												<label>Line 2</label> <input class="form-control"
-													id="poLine2" name="poLine2">
+													<div class="form-group">
+														<label>Name</label> <input class="form-control" id="name"
+															name="name" />
+													</div>
+
+													<div class="form-group">
+														<label>Registration number</label> <input
+															class="form-control" id="registrationNumber"
+															name="registrationNumber">
+													</div>
+
+													<div class="form-group">
+														<label>Tax number</label> <input class="form-control"
+															id="taxNumber" name="taxNumber">
+													</div>
+
+													<div class="form-group">
+														<label>Skill development levy number</label> <input
+															class="form-control" id="skillDevelopmentLevyNumber"
+															name="skillDevelopmentLevyNumber">
+													</div>
+
+													<div class="form-group">
+														<label>UIF number</label> <input class="form-control"
+															id="uifNumber" name="uifNumber">
+													</div>
+
+													<div class="form-group">
+														<label>Wrokmen's compensation number</label> <input
+															class="form-control" id="workmenCompensationNumber"
+															name="workmenCompensationNumber">
+													</div>
+
+													<div class="form-group">
+														<label>Sector</label> <select class="form-control"
+															id="sector" name="sector">
+															<option>Agriculture</option>
+															<option>Manufacturing</option>
+															<option>Service</option>
+														</select>
+													</div>
+
+
+												</div>
+												<div class="tab-pane" id="tab2">
+													<div class="form-group">
+														<label>Telephone number</label> <input
+															class="form-control" id="telephoneNumber"
+															name="telephoneNumber">
+													</div>
+
+													<div class="form-group">
+														<label>Fax number</label> <input class="form-control"
+															id="faxNumber" name="faxNumber">
+													</div>
+
+													<div class="form-group">
+														<label>Email</label> <input class="form-control"
+															id="email" name="email">
+													</div>
+
+													<div class="form-group">
+														<label>Website url</label> <input class="form-control"
+															id="website" name="website">
+													</div>
+												</div>
+												<div class="tab-pane" id="tab3">
+													<br /> Physical Address <br />
+													<div class="form-group">
+														<label>Line 1</label> <input class="form-control"
+															id="phLine1" name="phLine1">
+													</div>
+
+													<div class="form-group">
+														<label>Line 2</label> <input class="form-control"
+															id="phLine2" name="phLine2">
+													</div>
+
+													<div class="form-group">
+														<label>Line 3</label> <input class="form-control"
+															id="phLine3" name="phLine3">
+													</div>
+
+													<div class="form-group">
+														<label>Suburb</label> <input class="form-control"
+															id="phSuburb" name="phSuburb">
+													</div>
+
+													<div class="form-group">
+														<label>Province</label> <select class="form-control"
+															id="phProvince" name="phProvince">
+															<option>Gauteng</option>
+														</select>
+													</div>
+
+													<div class="form-group">
+														<label>Postal code</label> <input class="form-control"
+															id="phPostalCode" name="phPostalCode">
+													</div>
+
+													<br />
+
+													<div class="form-group">
+														<label>Is the above address is postal address as
+															well? </label> <input class="form-control" type="checkbox"
+															value="" id="isPostalAdrressSame"
+															name="isPostalAdrressSame">
+													</div>
+
+													<br />
+
+													<div id="postalAddressBlock">
+														Postal Address
+														<div class="form-group">
+															<label>Line 1</label> <input class="form-control"
+																id="poLine1" name="poLine1">
+														</div>
+
+														<div class="form-group">
+															<label>Line 2</label> <input class="form-control"
+																id="poLine2" name="poLine2">
+														</div>
+
+														<div class="form-group">
+															<label>Line 3</label> <input class="form-control"
+																id="poLine3" name="poLine3">
+														</div>
+
+														<div class="form-group">
+															<label>Suburb</label> <input class="form-control"
+																id="poSuburb" name="poSuburb">
+														</div>
+
+														<div class="form-group">
+															<label>Province</label> <select class="form-control"
+																id="poProvince" name="poProvince">
+																<option>Gauteng</option>
+															</select>
+														</div>
+
+														<div class="form-group">
+															<label>Postal code</label> <input class="form-control"
+																id="poPostalCode" name="poPostalCode">
+														</div>
+													</div>
+												</div>
+												<div class="tab-pane" id="tab4">
+
+													<div class="form-group">
+														<label>No. of members</label> <input class="form-control"
+															id="numberOfMembers" name="numberOfMembers">
+													</div>
+
+													<div class="form-group">
+														<label>No. of male members</label> <input
+															class="form-control" id="numberOfMaleMembers"
+															name="numberOfMaleMembers">
+													</div>
+
+													<div class="form-group">
+														<label>No. of female members</label> <input
+															class="form-control" id="numberOfFemaleMembers"
+															name="numberOfFemaleMembers">
+													</div>
+
+													<div class="form-group">
+														<label>No. of youth members</label> <input
+															class="form-control" id="numberOfYouthMembers"
+															name="numberOfYouthMembers">
+													</div>
+
+													<div class="form-group">
+														<label>No. of disabled members</label> <input
+															class="form-control" id="numberOfDisabledMembers"
+															name="numberOfDisabledMembers">
+													</div>
+
+													<div class="form-group">
+														<label>No. of Black members</label> <input
+															class="form-control" id="numberOfBlackMembers"
+															name="numberOfBlackMembers">
+													</div>
+
+													<div class="form-group">
+														<label>No. of coloured members</label> <input
+															class="form-control" id="numberOfColouredMembers"
+															name="numberOfColouredMembers">
+													</div>
+
+													<div class="form-group">
+														<label>No. of indian members</label> <input
+															class="form-control" id="numberOfIndianMembers"
+															name="numberOfIndianMembers">
+													</div>
+
+													<div class="form-group">
+														<label>No. of white members</label> <input
+															class="form-control" id="numberOfWhiteMembers"
+															name="numberOfWhiteMembers">
+													</div>
+
+													<div class="form-group">
+														<label>Current monthly turnover</label> <input
+															class="form-control" id="currentMonthlyTurnover"
+															name="currentMonthlyTurnover">
+													</div>
+
+													<div class="form-group">
+														<label>Estimated yearly turnover</label> <input
+															class="form-control" id="yearlyTurnover"
+															name=yearlyTurnover>
+													</div>
+
+													<div class="form-group">
+														<label>No. of employees</label> <input
+															class="form-control" id="numberOfEmployees"
+															name="numberOfEmployees">
+													</div>
+
+													<div class="form-group">
+														<label>Have you previously received a Government
+															support Grant Financial/Non-Financial?</label> <input
+															class="form-control" type="checkbox" value=""
+															id="receivedGrant" name="receivedGrant">
+													</div>
+
+													<div class="form-group">
+														<label>Department or Agency Provided the Support</label> <input
+															class="form-control" id="grantingDepartment"
+															name="grantingDepartment">
+													</div>
+
+													<div class="form-group">
+														<label>What kind of Support do you require?</label> <input
+															class="form-control" id="requiredSupport"
+															name="requiredSupport">
+													</div>
+
+												</div>
+
+												<div class="tab-pane" id="tab5">
+
+													Chair Person
+
+													<div class="form-group">
+														<label>Name</label> <input class="form-control"
+															id="chairPersonName" name="chairPersonName">
+													</div>
+
+													<div class="form-group">
+														<label>Gender</label>
+														<div class="radio">
+															<label> <input type="radio"
+																name="chairPersonGender" id="chairPersonGender1"
+																value="male" checked>Male
+															</label>
+														</div>
+														<div class="radio">
+															<label> <input type="radio"
+																name="chairPersonGender" id="chairPersonGender2"
+																value="female">Female
+															</label>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label>Id number</label> <input class="form-control"
+															id="chairPersonIdNumber" name="chairPersonIdNumber">
+													</div>
+
+													<div class="form-group">
+														<label>Contact Number</label> <input class="form-control"
+															id="chairPersonContactNumber"
+															name="chairPersonContactNumber">
+													</div>
+
+													<br /> Deputy chair Person
+
+													<div class="form-group">
+														<label>Name</label> <input class="form-control"
+															id="deputyChairPersonName" name="deputyChairPersonName">
+													</div>
+
+													<div class="form-group">
+														<label>Gender</label>
+														<div class="radio">
+															<label> <input type="radio"
+																name="deputyChairPersonGender"
+																id="deputyChairPersonGender1" value="male" checked>Male
+															</label>
+														</div>
+														<div class="radio">
+															<label> <input type="radio"
+																name="deputyChairPersonGender"
+																id="deputyChairPersonGender2" value="female">Female
+															</label>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label>Id number</label> <input class="form-control"
+															id="deputyChairPersonIdNumber"
+															name="deputyChairPersonIdNumber">
+													</div>
+
+													<div class="form-group">
+														<label>Contact Number</label> <input class="form-control"
+															id="deputyChairPersonContactNumber"
+															name="deputyChairPersonContactNumber">
+													</div>
+
+													<br /> Secretary
+
+													<div class="form-group">
+														<label>Name</label> <input class="form-control"
+															id="secretaryName" name="secretaryName">
+													</div>
+
+													<div class="form-group">
+														<label>Gender</label>
+														<div class="radio">
+															<label> <input type="radio"
+																name="secretaryGender" id="secretaryGender1"
+																value="male" checked>Male
+															</label>
+														</div>
+														<div class="radio">
+															<label> <input type="radio"
+																name="secretaryGender" id="secretaryGender2"
+																value="female">Female
+															</label>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label>Id number</label> <input class="form-control"
+															id="secretaryIdNumber" name="secretaryIdNumber">
+													</div>
+
+													<div class="form-group">
+														<label>Contact Number</label> <input class="form-control"
+															id="secretaryContactNumber" name="secretaryContactNumber">
+													</div>
+
+													<br /> Deputy Secretary
+
+													<div class="form-group">
+														<label>Name</label> <input class="form-control"
+															id="deputySecretaryName" name="deputySecretaryName">
+													</div>
+
+													<div class="form-group">
+														<label>Gender</label>
+														<div class="radio">
+															<label> <input type="radio"
+																name="deputySecretaryGender" id="deputySecretaryGender1"
+																value="male" checked>Male
+															</label>
+														</div>
+														<div class="radio">
+															<label> <input type="radio"
+																name="deputySecretaryGender" id="deputySecretaryGender2"
+																value="female">Female
+															</label>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label>Id number</label> <input class="form-control"
+															id="deputySecretaryIdNumber"
+															name="deputySecretaryIdNumber">
+													</div>
+
+													<div class="form-group">
+														<label>Contact Number</label> <input class="form-control"
+															id="deputySecretaryContactNumber"
+															name="deputySecretaryContactNumber">
+													</div>
+
+													<br /> Treasurer
+
+													<div class="form-group">
+														<label>Name</label> <input class="form-control"
+															id="treasurerName" name="treasurerName">
+													</div>
+
+													<div class="form-group">
+														<label>Gender</label>
+														<div class="radio">
+															<label> <input type="radio"
+																name="treasurerGender" id="treasurerGender1"
+																value="male" checked>Male
+															</label>
+														</div>
+														<div class="radio">
+															<label> <input type="radio"
+																name="treasurerGender" id="treasurerGender2"
+																value="female">Female
+															</label>
+														</div>
+													</div>
+
+													<div class="form-group">
+														<label>Id number</label> <input class="form-control"
+															id="treasurerIdNumber" name="treasurerIdNumber">
+													</div>
+
+													<div class="form-group">
+														<label>Contact Number</label> <input class="form-control"
+															id="treasurerContactNumber" name="treasurerContactNumber">
+													</div>
+												</div>
+
+												<ul class="pager wizard">
+													<li class="previous first" style="display: none;"><a
+														href="#">First</a></li>
+													<li class="previous"><a href="#">Previous</a></li>
+													<li class="next"><a href="#">Next</a></li>
+													<li class="next finish" style="display:none;"><a href="javascript:;">Finish</a></li>
+												</ul>
 											</div>
-
-											<div class="form-group">
-												<label>Line 3</label> <input class="form-control"
-													id="poLine3" name="poLine3">
-											</div>
-
-											<div class="form-group">
-												<label>Suburb</label> <input class="form-control"
-													id="poSuburb" name="poSuburb">
-											</div>
-
-											<div class="form-group">
-												<label>Province</label> <select class="form-control"
-													id="poProvince" name="poProvince">
-													<option>Gauteng</option>
-												</select>
-											</div>
-
-											<div class="form-group">
-												<label>Postal code</label> <input class="form-control"
-													id="poPostalCode" name="poPostalCode">
-											</div>
 										</div>
-
-										<br />
-
-										<div class="form-group">
-											<label>No. of members</label> <input class="form-control"
-												id="numberOfMembers" name="numberOfMembers">
-										</div>
-
-										<div class="form-group">
-											<label>No. of male members</label> <input
-												class="form-control" id="numberOfMaleMembers"
-												name="numberOfMaleMembers">
-										</div>
-
-										<div class="form-group">
-											<label>No. of female members</label> <input
-												class="form-control" id="numberOfFemaleMembers"
-												name="numberOfFemaleMembers">
-										</div>
-
-										<div class="form-group">
-											<label>No. of youth members</label> <input
-												class="form-control" id="numberOfYouthMembers"
-												name="numberOfYouthMembers">
-										</div>
-
-										<div class="form-group">
-											<label>No. of disabled members</label> <input
-												class="form-control" id="numberOfDisabledMembers"
-												name="numberOfDisabledMembers">
-										</div>
-
-										<div class="form-group">
-											<label>No. of Black members</label> <input
-												class="form-control" id="numberOfBlackMembers"
-												name="numberOfBlackMembers">
-										</div>
-
-										<div class="form-group">
-											<label>No. of coloured members</label> <input
-												class="form-control" id="numberOfColouredMembers"
-												name="numberOfColouredMembers">
-										</div>
-
-										<div class="form-group">
-											<label>No. of indian members</label> <input
-												class="form-control" id="numberOfIndianMembers"
-												name="numberOfIndianMembers">
-										</div>
-
-										<div class="form-group">
-											<label>No. of white members</label> <input
-												class="form-control" id="numberOfWhiteMembers"
-												name="numberOfWhiteMembers">
-										</div>
-
-										<div class="form-group">
-											<label>Current monthly turnover</label> <input
-												class="form-control" id="currentMonthlyTurnover"
-												name="currentMonthlyTurnover">
-										</div>
-
-										<div class="form-group">
-											<label>Estimated yearly turnover</label> <input
-												class="form-control" id="yearlyTurnover" name=yearlyTurnover>
-										</div>
-
-										<div class="form-group">
-											<label>No. of employees</label> <input class="form-control"
-												id="numberOfEmployees" name="numberOfEmployees">
-										</div>
-
-										<div class="form-group">
-											<label>Have you previously received a Government
-												support Grant Financial/Non-Financial?</label> <input
-												class="form-control" type="checkbox" value=""
-												id="receivedGrant" name="receivedGrant">
-										</div>
-
-										<div class="form-group">
-											<label>Department or Agency Provided the Support</label> <input
-												class="form-control" id="grantingDepartment"
-												name="grantingDepartment">
-										</div>
-
-										<div class="form-group">
-											<label>What kind of Support do you require?</label> <input
-												class="form-control" id="requiredSupport"
-												name="requiredSupport">
-										</div>
-
-										<br />
-	                                    
-	                                    Chair Person
-	                                    
-	                                     <div class="form-group">
-											<label>Name</label> <input class="form-control"
-												id="chairPersonName" name="chairPersonName">
-										</div>
-
-										<div class="form-group">
-											<label>Gender</label>
-											<div class="radio">
-												<label> <input type="radio" name="chairPersonGender"
-													id="chairPersonGender1" value="male" checked>Male
-												</label>
-											</div>
-											<div class="radio">
-												<label> <input type="radio" name="chairPersonGender"
-													id="chairPersonGender2" value="female">Female
-												</label>
-											</div>
-										</div>
-
-										<div class="form-group">
-											<label>Id number</label> <input class="form-control"
-												id="chairPersonIdNumber" name="chairPersonIdNumber">
-										</div>
-
-										<div class="form-group">
-											<label>Contact Number</label> <input class="form-control"
-												id="chairPersonContactNumber"
-												name="chairPersonContactNumber">
-										</div>
-
-										<br />
-	                                    Deputy chair Person
-	                                    
-	                                     <div class="form-group">
-											<label>Name</label> <input class="form-control"
-												id="deputyChairPersonName" name="deputyChairPersonName">
-										</div>
-
-										<div class="form-group">
-											<label>Gender</label>
-											<div class="radio">
-												<label> <input type="radio"
-													name="deputyChairPersonGender"
-													id="deputyChairPersonGender1" value="male" checked>Male
-												</label>
-											</div>
-											<div class="radio">
-												<label> <input type="radio"
-													name="deputyChairPersonGender"
-													id="deputyChairPersonGender2" value="female">Female
-												</label>
-											</div>
-										</div>
-
-										<div class="form-group">
-											<label>Id number</label> <input class="form-control"
-												id="deputyChairPersonIdNumber"
-												name="deputyChairPersonIdNumber">
-										</div>
-
-										<div class="form-group">
-											<label>Contact Number</label> <input class="form-control"
-												id="deputyChairPersonContactNumber"
-												name="deputyChairPersonContactNumber">
-										</div>
-
-										<br />
-	                                    Secretary
-	                                    
-	                                     <div class="form-group">
-											<label>Name</label> <input class="form-control"
-												id="secretaryName" name="secretaryName">
-										</div>
-
-										<div class="form-group">
-											<label>Gender</label>
-											<div class="radio">
-												<label> <input type="radio" name="secretaryGender"
-													id="secretaryGender1" value="male" checked>Male
-												</label>
-											</div>
-											<div class="radio">
-												<label> <input type="radio" name="secretaryGender"
-													id="secretaryGender2" value="female">Female
-												</label>
-											</div>
-										</div>
-
-										<div class="form-group">
-											<label>Id number</label> <input class="form-control"
-												id="secretaryIdNumber" name="secretaryIdNumber">
-										</div>
-
-										<div class="form-group">
-											<label>Contact Number</label> <input class="form-control"
-												id="secretaryContactNumber" name="secretaryContactNumber">
-										</div>
-
-										<br />
-	                                    Deputy Secretary
-	                                    
-	                                     <div class="form-group">
-											<label>Name</label> <input class="form-control"
-												id="deputySecretaryName" name="deputySecretaryName">
-										</div>
-
-										<div class="form-group">
-											<label>Gender</label>
-											<div class="radio">
-												<label> <input type="radio"
-													name="deputySecretaryGender" id="deputySecretaryGender1"
-													value="male" checked>Male
-												</label>
-											</div>
-											<div class="radio">
-												<label> <input type="radio"
-													name="deputySecretaryGender" id="deputySecretaryGender2"
-													value="female">Female
-												</label>
-											</div>
-										</div>
-
-										<div class="form-group">
-											<label>Id number</label> <input class="form-control"
-												id="deputySecretaryIdNumber" name="deputySecretaryIdNumber">
-										</div>
-
-										<div class="form-group">
-											<label>Contact Number</label> <input class="form-control"
-												id="deputySecretaryContactNumber"
-												name="deputySecretaryContactNumber">
-										</div>
-
-										<br />
-	                                    Treasurer
-	                                    
-	                                     <div class="form-group">
-											<label>Name</label> <input class="form-control"
-												id="treasurerName" name="treasurerName">
-										</div>
-
-										<div class="form-group">
-											<label>Gender</label>
-											<div class="radio">
-												<label> <input type="radio" name="treasurerGender"
-													id="treasurerGender1" value="male" checked>Male
-												</label>
-											</div>
-											<div class="radio">
-												<label> <input type="radio" name="treasurerGender"
-													id="treasurerGender2" value="female">Female
-												</label>
-											</div>
-										</div>
-
-										<div class="form-group">
-											<label>Id number</label> <input class="form-control"
-												id="treasurerIdNumber" name="treasurerIdNumber">
-										</div>
-
-										<div class="form-group">
-											<label>Contact Number</label> <input class="form-control"
-												id="treasurerContactNumber" name="treasurerContactNumber">
-										</div>
-
-										<button type="submit" class="btn btn-default">Submit</button>
-										<button type="reset" class="btn btn-default">Reset</button>
+										
+										<button type="submit" class="btn btn-default hide" id="submitButton">Submit</button>
+										
+										<!-- <button type="reset" class="btn btn-default">Reset</button> -->
 									</form:form>
 
 								</div>
@@ -766,12 +812,51 @@
 	<!-- Morris Charts JavaScript -->
 	<script
 		src="<c:url value="/static/resources/bower_components/raphael/raphael-min.js"/>"></script>
-	<script
+	<%-- 	<script
 		src="<c:url value="/static/resources/bower_components/morrisjs/morris.min.js"/>"></script>
-	<script src="<c:url value="/static/resources/js/morris-data.js"/>"></script>
+	<script src="<c:url value="/static/resources/js/morris-data.js"/>"></script> --%>
 
 	<!-- Custom Theme JavaScript -->
 	<script src="<c:url value="/static/resources/dist/js/sb-admin-2.js"/>"></script>
+
+	<script
+		src="<c:url value="/static/resources/js/jquery.bootstrap.wizard.min.js"/>"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#rootwizard').bootstrapWizard(
+
+					 { 
+						 onTabShow : function(tab, navigation, index) {
+										var $total = navigation.find('li').length;
+										var $current = index + 1;
+										var $percent = ($current / $total) * 100;
+										$('#rootwizard').find('.bar').css({
+											width : $percent + '%'
+										});
+
+										// If it's the last tab then hide the last button and show the finish instead
+										if($current >= $total) {
+											$('#rootwizard').find('.pager .next').hide();
+											$('#rootwizard').find('.pager .finish').show();
+											$('#rootwizard').find('.pager .finish').removeClass('disabled');
+										} else {
+											$('#rootwizard').find('.pager .next').show();
+											$('#rootwizard').find('.pager .finish').hide();
+										}
+										
+									  }
+					} 
+
+			);
+		});
+
+		$('#rootwizard .finish').click(function() {
+			//$('#rootwizard').find("a[href*='tab1']").trigger('click');
+			alert("hello");
+			$('#submitButton').click();
+		});
+	</script>
 
 </body>
 

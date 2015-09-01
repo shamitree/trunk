@@ -9,6 +9,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.ForeignKey;
+
 @Entity
 @Table(name="PERSON")
 public class Person extends Party {
@@ -28,10 +30,11 @@ public class Person extends Party {
 	
 	private String designation;
 
-	@ManyToOne
-	@JoinColumn(name="party_id", referencedColumnName="id")
-	private Party party;
-	
+//	@ManyToOne
+//	@JoinColumn(name="party_id", referencedColumnName="id")
+//	@ForeignKey(name = "FK_PARTY_MEMBER")
+//	private Party party;
+//	
 	@Temporal(TemporalType.DATE)
 	private Date dob;
 
@@ -82,5 +85,13 @@ public class Person extends Party {
 	public void setDesignation(String designation) {
 		this.designation = designation;
 	}
+
+//	public Party getParty() {
+//		return party;
+//	}
+//
+//	public void setParty(Party party) {
+//		this.party = party;
+//	}
 	
 }

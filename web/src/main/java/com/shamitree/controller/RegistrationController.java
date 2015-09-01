@@ -55,10 +55,7 @@ public class RegistrationController {
         model.addAttribute("contact", contact);
         model.addAttribute("sector", sector);
         
-        
         return "register";
-        
-        
         
     }
 
@@ -128,11 +125,8 @@ public class RegistrationController {
     	String requiredSupport = request.getParameter("requiredSupport");
     	
     	
-    	primaryCoOperative.setChairPerson(null);
     	primaryCoOperative.setCode(null);
     	primaryCoOperative.setDepartmentOfGovtGrant(grantingDepartment);
-    	primaryCoOperative.setDeputyChairPerson(null);
-    	primaryCoOperative.setDeputySecretary(null);
     	primaryCoOperative.setDescription(null);
     	//TODO 
     	primaryCoOperative.setFranchise(false);
